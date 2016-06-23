@@ -29,6 +29,9 @@ header{
   border: 1px solid black;
   text-align: center;
 }
+h1{
+  visibility: hidden;
+}
 
 .logo{
   max-width: 668px;
