@@ -1,0 +1,493 @@
+<!<DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 rwd web-font" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8 ie7 rwd web-font" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9 ie8 rwd web-font" lang="en"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js ie9 rwd web-font" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js rwd web-font" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Default : v3.1 Template : Princess Cruises</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<!--
+	<meta property="og:title" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="fb:admins" content="" />
+	<meta content="Percussion CM System" name="generator"/>
+	<meta name="perc_linkback" id="perc_linkback" content="FmJhZWRseAdiZ3gBZGdgYHgGZmRkeBNkYmBm"/>
+	-->
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="home" title="Princess Home" href="http://www.princess.com" />
+
+	<link rel="stylesheet" href="/css/global/princess.combined.css" />
+	<link rel="stylesheet" href="/css/global/responsive_header_footer.css" />
+	<link rel="stylesheet" href="/css/global/cms.css" />
+
+	<script src="/js/global/princess-libs.combined.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="/js/global/jquery/plugins/respond/respond.min.js"></script>-->
+	<style>
+		.clearfix:before, .clearfix:after {
+			content: "";
+			display: table;
+		}
+		.clearfix:after {
+			clear: both;
+		}
+		.clearfix {
+			zoom: 1;
+		}
+		.image{
+			width: 100%;
+		}
+		.action-toolbar-wrapper {
+			font-family:'Gotham XNarrow SSm 5r', Arial, Helvetica, sans-serif;
+			z-index: 1000;
+		}
+
+		.toolbar-item{
+			display: inline-block;
+			text-decoration: none;
+			color: white;
+			font-size: .875em;
+		}
+		.toolbar-hover:hover{
+			background-color: #484848
+		}
+		.toolbar-item + .toolbar-item{
+			padding: 0px 10px 7px 5px;
+			border-left: 1px solid white;
+			margin-right: -5px
+		}
+		.brochure{
+			padding: 0px 10px 7px 5px;
+			border-left: 1px solid white;
+			margin-right: -5px
+		}
+		.action-toolbar{
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			background-color: #787978;
+			opacity: 0.8;
+			text-align: center;
+			z-index: 1000;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.action-toolbar-lowered{
+			position: fixed;
+			bottom: -30px;
+			left: 0px;
+			width: 100%;
+			background-color: #787978;
+			opacity: 0.8;
+			text-align: center;
+			z-index: 1000;
+			margin: 0px;
+			padding: 0px;
+		}
+		.toolbar-hide{
+			position: absolute;
+			right: 10px;
+			top: -15px;
+			border-radius: 3px;
+			-moz-border-radius:3px;
+			-webkit-border-radius:3px;
+			width: 50px;
+			height: 45px;
+			padding-bottom: 10px;
+			z-index: 1;
+		}
+		.toolbar-hide-text{
+			padding-bottom: 10px;
+		}
+		.toolbar-button {
+			background-color:#787978;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+		.text-white{
+			color: white;
+		}
+		.action-toolbar-list{
+			padding: 0px;
+			margin: 0px;
+		}
+		.toolbar-link-view{
+			text-decoration: none;
+			color: white;
+		}
+		.toolbar-hide-text{
+			display: block;
+		}
+		.share-button{
+			display: none;
+			border: none;
+			margin-right: 0px;
+		}
+		.share-links{
+			display: inline-block;
+			text-decoration: none;
+			color: white;
+			margin:0px;
+			padding: 0px;
+			z-index: 1000;
+		}
+		.icons{
+			height: 30px;
+			background-image: url(../images/global/action-toolbar-icons.png);
+			position: relative;
+			display: inline-block;
+		}
+		.hide-before{
+			display: none;
+		}
+	 	.facebook-icon{
+			width: 30px;
+			background-position: -22.5px 0px;
+			top: 5px;
+			margin: -5px 0px;
+		}
+		.facebook-alt-icon{
+			width: 30px;
+			background-position: -22.5px 0px;
+			top: 5px;
+			margin: 0px;
+		}
+		.pinterest-icon{
+			width: 30px;
+			background-position: -47px 0px;
+			top: 5px;
+			margin: -5px 0px;
+		}
+		.pinterest-alt-icon{
+			width: 30px;
+			background-position: -200px 0px;
+			top: 5px;
+			margin: 0px 10px;
+		}
+		.email-icon{
+			width: 30px;
+			background-position: -72px 0px;
+			top: 5px;
+			margin: -5px 0px;
+		}
+		.email-alt-icon{
+			width: 30px;
+			background-position: -72px 0px;
+			top: 5px;
+			margin: 0px;
+		}
+		.chevron-icon{
+			width: 20px;
+			height: 18px;
+			background-position: 0px -20px;
+		}
+		.unhide-icon{
+			width: 20px;
+			height: 18px;
+			background-position: 0px -1px;
+		}
+		.brochure-icon{
+			width: 25px;
+			background-position: -100px 0px;
+			top: 5px;
+			margin: -5px 0px;
+		}
+		.expert-icon{
+			width: 25px;
+			background-position: -125px 0px;
+			top: 5px;
+			margin: -5px 0px;
+		}
+		.feedback-icon{
+			width: 25px;
+			background-position: -150px 0px;
+			top: 5px;
+			margin: -5px 0px;
+		}
+		.hidden-share-bar{
+			position: fixed;
+			bottom: -40px;
+			left: 0px;
+			height: 40px;
+			list-style-type: none;
+		}
+
+		.center-align{
+			text-align: center;
+		}
+		@media screen and (max-width: 760px){
+			.hide{
+				display: none;
+			}
+			.hide-before{
+				display: inline-block;
+			}
+			.share-button{
+				display: inline-block;
+				margin-right: -5px;
+				padding: 7px 10px;
+			}
+			.share-button:hover{
+				background-color: #484848;
+			}
+
+			.text-change{
+				display: none;
+			}
+			.toolbar-item + .toolbar-item{
+				padding: 7px 10px;
+				margin-right: -5px;
+				border-left: 1px solid white;
+			}
+			.share-bar{
+				position: fixed;
+				bottom: 0px;
+				left: 0px;
+				width: 100%;
+				height: 40px;
+				background-color: #333333;
+				opacity: 0.8;
+			}
+			.action-toolbar-raised{
+				position: fixed;
+				bottom: 40px;
+				left: 0px;
+				width: 100%;
+				background-color: #787978;
+				opacity: 0.8;
+				text-align: center;
+				z-index: 1000;
+				margin: 0px;
+				padding: 0px;
+			}
+		}
+		@media screen and (max-width: 500px){
+			.toolbar-hide{
+				position: absolute;
+				left: 15px;
+				top: -15px;
+				-moz-border-radius:3px;
+				-webkit-border-radius:3px;
+				line-height: 18px;
+				z-index: 1;
+			}
+
+			.toolbar-item + .toolbar-item{
+				padding: 7px 0px;
+			}
+			.toolbar-hide-text{
+				display: none;
+			}
+			.toolbar-hide{
+				position: absolute;
+				height: 20px;
+				left: 5px;
+				top: -20px;
+				-moz-border-radius:3px;
+				-webkit-border-radius:3px;
+				border-radius: 3px 3px 0px 0px;
+				width: 40px;
+				z-index: 1;
+			}
+			.toolbar-hide-icon{
+				padding-bottom: 0px;
+			}
+			.toolbar-hide-text{
+				display: none;
+			}
+			.link-text{
+				padding: 7px 10px;
+			}
+		}
+	</style>
+
+	<!--#include virtual="/html/global/includes/g_scripts.html" -->
+</head>
+
+<body>
+	<!--begin container-->
+	<div id="container">
+
+		<!--begin princess-header-->
+		<div id="princess-header">
+			<!--#include virtual="/html/global/nav/header.html" -->
+			<!--#include virtual="/html/global/nav/nav.html" -->
+		</div>
+		<!--end princess-header-->
+
+		<main role="main" class="cms-bg full-width">
+
+			<!--begin content-->
+				<header class="article-header">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-xs-pad-0-left col-md-7 col-lg-8 article-title light-bg">
+								<h1>Article Title</h1>
+								<h2 class="no-caps gotham-book">Secondary title / into text</h2>
+								<div id="result"></div>
+							</div>
+							<div class="col-xs-12 col-xs-pad-15-top col-xs-pad-0 col-md-5 col-md-pad-15-left col-md-pad-0-top col-lg-4 action-widget-wrapper">
+								<!--#include virtual="/cms/actionsWidget.html" -->
+							</div>
+						</div>
+						<!--#include virtual="/cms/actionShareDrawer.html" -->
+						<!--#include virtual="/learn/cruise-destinations/alaska-cruises/includes/ak_drop-tabs.html" -->
+					</div>
+				</header>
+						<br />
+						<br />
+						<br />
+						<br />
+						<img class="image" src="http://www.placehold.it/1600x650" alt="alt text here" />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+
+		</main>
+			<div class="action-toolbar-wrapper clearfix" style="bottom: 0px;"><!--for screen size-->
+				<div class="action-toolbar gotham-xn-medium"><!--for sticky-->
+					<ul class="action-toolbar-list clearfix">
+						<li class=" share-links link-text">
+							<li class="share-button toolbar-item toolbar-hover toolbar-button" id="share-active">
+								<span class="share-bg">Share</span>
+							</li>
+							<span class="text-change text-white">Share:</span>
+							<a class="toolbar-icon icons toolbar-link-view toolbar-hover hide facebook-icon"
+								href=""></a>
+							<a class="toolbar-icon icons toolbar-link-view toolbar-hover hide pinterest-icon"
+								href=""></a>
+							<a class="toolbar-icon icons toolbar-link-view toolbar-hover hide email-icon"
+								href=""></a>
+								<li class="hidden-share-bar center-align">
+									<a class="icons facebook-alt-icon toolbar-hover" href=""></a>
+									<a class="icons pinterest-alt-icon toolbar-hover" href=""></a>
+									<a class="icons email-alt-icon toolbar-hover" href=""></a>
+								</li>
+						</li>
+						<li class="toolbar-item toolbar-hover hide brochure">
+							<a class="toolbar-brochure toolbar-link-view link-text" target="framename"
+								href="https://book.princess.com/captaincircle/brochureRequest.page">
+								<span class="toolbar-icon icons hide brochure-icon"></span>
+								<span>Brochure</span>
+							</a>
+						</li>
+						<li class="toolbar-item toolbar-hover">
+							<a class="toolbar-ask-expert toolbar-link-view link-text"
+							href="">
+								<span class="toolbar-icon icons hide expert-icon"></span>
+								<span class="contact-expert hide">Contact an Expert</span>
+								<span class="contact-expert hide-before ask-expert">Ask an Expert</span>
+							</a>
+						</li>
+						<li class="toolbar-item toolbar-hover">
+							<a class="toolbar-feedback toolbar-link-view link-text" id="feedbackify"  href="">
+								<span class="toolbar-icon icons hide feedback-icon"></span>
+								<span class="website-feedback hide">Website Feedback</span>
+								<span class="website-feedback hide-before site-feedback">Site Feedback</span>
+							</a>
+						</li>
+					</ul>
+					<button class=" toolbar-hide toolbar-button  toolbar-hover" id="hide-button">
+						<span class="icons toolbar-hide-icon chevron-icon"></span>
+						<span class="toolbar-hide-text">Hide</span>
+					</button>
+				</div>
+			</div>
+
+		<!--begin princess footer-->
+		<!--#include virtual="/html/global/nav/footer_responsive.html" -->
+		<!--end princess footer-->
+
+	</div>
+	<!--end container-->
+
+	<script src="/js/global/princess-plugins.combined.js"></script>
+	<script src="/js/global/responsive_header_footer.js"></script>
+	<script src="/js/global/cms/cms.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var visible = false;
+		var hideButton = document.getElementById("hide-button");
+		var shareActive = document.getElementById("share-active");
+		var feedbackify = document.getElementById("feedbackify")
+		if(!sessionStorage.getItem('hidden')){
+			sessionStorage.setItem('hidden', 'false');
+		}
+		if(sessionStorage.getItem('hidden')=='true'){
+				$(".action-toolbar").toggleClass("action-toolbar-lowered ");
+				$(".chevron-icon").toggleClass("unhide-icon");
+		}
+		$(hideButton).click(function(){
+			$(".action-toolbar").toggleClass("action-toolbar-lowered ");
+			$(".chevron-icon").toggleClass("unhide-icon");
+			if(visible == true){
+				$(".hidden-share-bar").toggleClass("share-bar");
+				$(".action-toolbar").toggleClass("action-toolbar-raised");
+			}
+			if(sessionStorage.getItem('hidden')== "false"){
+				sessionStorage.setItem('hidden', 'true');
+			}else{
+				sessionStorage.setItem('hidden', 'false');
+			}
+		});
+		$(shareActive).click(function(){
+			$(".action-toolbar").toggleClass("action-toolbar-raised");
+			$(".hidden-share-bar").toggleClass("share-bar");
+			if(visible == false){
+				visible = true;
+			}
+			else{
+				visible = false;
+			}
+		});
+		/*$(feedbackify).click(function()){
+			//open feedbackify session
+		};*/
+	});
+	</script>
+
+</body>
+</html>
