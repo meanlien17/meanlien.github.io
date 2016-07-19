@@ -396,14 +396,15 @@
 								<span class="share-bg">Share</span>
 							</li>
 							<span class="text-change text-white">Share:</span>
-							<a class="toolbar-icon icons toolbar-hover hide facebook-icon"
-								href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook"></a>
+							<a class="toolbar-icon icons toolbar-hover hide facebook-icon facebook-link"
+								href="#" target="_blank" alt="Share on Facebook"></a>
 							<a class="toolbar-icon icons toolbar-hover hide pinterest-icon"
 								href=""></a>
 							<a class="toolbar-icon icons toolbar-hover hide email-icon"
 								href=""></a>
 								<li class="hidden-share-bar center-align">
-									<a class="icons facebook-alt-icon toolbar-hover" href="http://www.facebook.com/sharer/sharer.php?u=https://www.princess.com&title=LookAtThis"></a>
+									<a class="icons facebook-alt-icon toolbar-hover facebook-link"
+									href="#"></a>
 									<a class="icons pinterest-alt-icon toolbar-hover" href=""></a>
 									<a class="icons email-alt-icon toolbar-hover" href=""></a>
 								</li>
@@ -493,11 +494,12 @@
 					visible = false;
 				}
 			});
-			$('.facebook-icon').click(function(){
+			$('.facebook-link').click(function(){
 				var url = window.location.href;
 				var title =  $(document).attr('title');
 				window.open("https://www.facebook.com/sharer/sharer.php?u="+url+"&t="+title);
 			});
+			$()
 		/*	(function(){
 				var $content = $('#feedbackify-option').detach();
 				$(feedbackify).on('click', function(){
