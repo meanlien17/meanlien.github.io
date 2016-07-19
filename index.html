@@ -50,28 +50,33 @@
 			font-family:'Gotham XNarrow SSm 5r', Arial, Helvetica, sans-serif;
 			z-index: 1000;
 		}
-
+		.link-text{
+			padding: 0px 10px 7px;
+			margin-bottom: -7px;
+		}
 		.toolbar-item{
 			display: inline-block;
 			text-decoration: none;
 			color: white;
 			font-size: .875em;
+			margin-right: -5px;
 		}
 		.toolbar-hover:hover{
 			background-color: #484848
 		}
 		.toolbar-item + .toolbar-item{
-			padding: 0px 10px 7px 5px;
+			padding-bottom: 7px;
 			border-left: 1px solid white;
-			margin-right: -5px
 		}
 		.brochure{
-			padding: 0px 10px 7px 5px;
+			padding-bottom: 7px;
 			border-left: 1px solid white;
-			margin-right: -5px
+			margin-right: -5px;
+
 		}
 		.action-toolbar{
 			position: fixed;
+			display:inline-block;
 			bottom: 0px;
 			left: 0px;
 			width: 100%;
@@ -79,8 +84,6 @@
 			opacity: 0.8;
 			text-align: center;
 			z-index: 1000;
-			margin: 0px;
-			padding: 0px;
 		}
 
 		.action-toolbar-lowered{
@@ -92,8 +95,7 @@
 			opacity: 0.8;
 			text-align: center;
 			z-index: 1000;
-			margin: 0px;
-			padding: 0px;
+
 		}
 		.toolbar-hide{
 			position: absolute;
@@ -124,8 +126,10 @@
 			margin: 0px;
 		}
 		.toolbar-link-view{
+			display: inline-block;
 			text-decoration: none;
 			color: white;
+
 		}
 		.toolbar-hide-text{
 			display: block;
@@ -133,7 +137,7 @@
 		.share-button{
 			display: none;
 			border: none;
-			margin-right: 0px;
+
 		}
 		.share-links{
 			display: inline-block;
@@ -145,7 +149,7 @@
 		}
 		.icons{
 			height: 30px;
-			background-image: url(../action-toolbar-icons.png);
+			background-image: url(../images/global/action-toolbar-icons.png);
 			position: relative;
 			display: inline-block;
 		}
@@ -227,7 +231,7 @@
 		.center-align{
 			text-align: center;
 		}
-		@media screen and (max-width: 760px){
+		@media screen and (max-width: 768px){
 			.hide{
 				display: none;
 			}
@@ -236,21 +240,30 @@
 			}
 			.share-button{
 				display: inline-block;
-				margin-right: -5px;
 				padding: 7px 10px;
+			}
+			.link-text{
+				padding: 7px 10px;
+				margin-bottom: -7px;
+			}
+			.action-toolbar-list{
+				padding: 0px;
+				margin: 0px;
 			}
 			.share-button:hover{
 				background-color: #484848;
 			}
-
+			.toolbar-link-view{
+				text-decoration: none;
+				color: white;
+			}
 			.text-change{
 				display: none;
 			}
 			.toolbar-item + .toolbar-item{
-				padding: 7px 10px;
-				margin-right: -5px;
 				border-left: 1px solid white;
 			}
+
 			.share-bar{
 				position: fixed;
 				bottom: 0px;
@@ -269,8 +282,7 @@
 				opacity: 0.8;
 				text-align: center;
 				z-index: 1000;
-				margin: 0px;
-				padding: 0px;
+
 			}
 		}
 		@media screen and (max-width: 500px){
@@ -282,10 +294,6 @@
 				-webkit-border-radius:3px;
 				line-height: 18px;
 				z-index: 1;
-			}
-
-			.toolbar-item + .toolbar-item{
-				padding: 7px 0px;
 			}
 			.toolbar-hide-text{
 				display: none;
@@ -301,14 +309,8 @@
 				width: 40px;
 				z-index: 1;
 			}
-			.toolbar-hide-icon{
-				padding-bottom: 0px;
-			}
 			.toolbar-hide-text{
 				display: none;
-			}
-			.link-text{
-				padding: 7px 10px;
 			}
 		}
 	</style>
@@ -385,34 +387,34 @@
 						<br />
 						<br />
 						<br />
-
 		</main>
 			<div class="action-toolbar-wrapper clearfix" style="bottom: 0px;"><!--for screen size-->
 				<div class="action-toolbar gotham-xn-medium"><!--for sticky-->
 					<ul class="action-toolbar-list clearfix">
-						<li class=" share-links link-text">
+						<li class=" share-links">
 							<li class="share-button toolbar-item toolbar-hover toolbar-button" id="share-active">
 								<span class="share-bg">Share</span>
 							</li>
 							<span class="text-change text-white">Share:</span>
-							<a class="toolbar-icon icons toolbar-link-view toolbar-hover hide facebook-icon"
+							<a class="toolbar-icon icons toolbar-hover hide facebook-icon"
+								href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook"></a>
+							<a class="toolbar-icon icons toolbar-hover hide pinterest-icon"
 								href=""></a>
-							<a class="toolbar-icon icons toolbar-link-view toolbar-hover hide pinterest-icon"
-								href=""></a>
-							<a class="toolbar-icon icons toolbar-link-view toolbar-hover hide email-icon"
+							<a class="toolbar-icon icons toolbar-hover hide email-icon"
 								href=""></a>
 								<li class="hidden-share-bar center-align">
-									<a class="icons facebook-alt-icon toolbar-hover" href=""></a>
+									<a class="icons facebook-alt-icon toolbar-hover" href="http://www.facebook.com/sharer/sharer.php?u=https://www.princess.com&title=LookAtThis"></a>
 									<a class="icons pinterest-alt-icon toolbar-hover" href=""></a>
 									<a class="icons email-alt-icon toolbar-hover" href=""></a>
 								</li>
 						</li>
 						<li class="toolbar-item toolbar-hover hide brochure">
-							<a class="toolbar-brochure toolbar-link-view link-text" target="framename"
+							<a class="toolbar-brochure toolbar-link-view link-text"
 								href="https://book.princess.com/captaincircle/brochureRequest.page">
 								<span class="toolbar-icon icons hide brochure-icon"></span>
 								<span>Brochure</span>
 							</a>
+
 						</li>
 						<li class="toolbar-item toolbar-hover">
 							<a class="toolbar-ask-expert toolbar-link-view link-text"
@@ -423,7 +425,7 @@
 							</a>
 						</li>
 						<li class="toolbar-item toolbar-hover">
-							<a class="toolbar-feedback toolbar-link-view link-text" id="feedbackify"  href="">
+							<a href="#" onclick="fby.push(['showForm', '11536']);return false;" class="toolbar-feedback toolbar-link-view link-text">
 								<span class="toolbar-icon icons hide feedback-icon"></span>
 								<span class="website-feedback hide">Website Feedback</span>
 								<span class="website-feedback hide-before site-feedback">Site Feedback</span>
@@ -448,46 +450,70 @@
 	<script src="/js/global/responsive_header_footer.js"></script>
 	<script src="/js/global/cms/cms.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function(){
-		var visible = false;
-		var hideButton = document.getElementById("hide-button");
-		var shareActive = document.getElementById("share-active");
-		var feedbackify = document.getElementById("feedbackify")
+		var fby = fby || [];
+		(function () {
+    var f = document.createElement('script'); f.type = 'text/javascript'; f.async = true;
+    f.src = '//cdn.feedbackify.com/f.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(f, s);
+	})();
+</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var visible = false;
+			var hideButton = document.getElementById("hide-button");
+			var shareActive = document.getElementById("share-active");
+		//	var feedbackify = document.getElementById("feedbackify")
 		if(!sessionStorage.getItem('hidden')){
 			sessionStorage.setItem('hidden', 'false');
 		}
-		if(sessionStorage.getItem('hidden')=='true'){
+			if(sessionStorage.getItem('hidden')=='true'){
+					$(".action-toolbar").toggleClass("action-toolbar-lowered ");
+					$(".chevron-icon").toggleClass("unhide-icon");
+			}
+			$(hideButton).click(function(){
 				$(".action-toolbar").toggleClass("action-toolbar-lowered ");
 				$(".chevron-icon").toggleClass("unhide-icon");
-		}
-		$(hideButton).click(function(){
-			$(".action-toolbar").toggleClass("action-toolbar-lowered ");
-			$(".chevron-icon").toggleClass("unhide-icon");
-			if(visible == true){
-				$(".hidden-share-bar").toggleClass("share-bar");
+				if(visible == true){
+					$(".hidden-share-bar").toggleClass("share-bar");
+					$(".action-toolbar").toggleClass("action-toolbar-raised");
+				}
+				if(sessionStorage.getItem('hidden')== "false"){
+					sessionStorage.setItem('hidden', 'true');
+				}else{
+					sessionStorage.setItem('hidden', 'false');
+				}
+			});
+			$(shareActive).click(function(){
 				$(".action-toolbar").toggleClass("action-toolbar-raised");
-			}
-			if(sessionStorage.getItem('hidden')== "false"){
-				sessionStorage.setItem('hidden', 'true');
-			}else{
-				sessionStorage.setItem('hidden', 'false');
-			}
+				$(".hidden-share-bar").toggleClass("share-bar");
+				if(visible == false){
+					visible = true;
+				}
+				else{
+					visible = false;
+				}
+			});
+			$('.facebook-icon').click(function(){
+				var url = window.location.href;
+				var title = document.title;
+				window.open("https://www.facebook.com/sharer/sharer.php?u="+url+"&t=");
+			});
+		/*	(function(){
+				var $content = $('#feedbackify-option').detach();
+				$(feedbackify).on('click', function(){
+					modal.open({content: $content, width:600, height:300});
+				});
+			});*/
 		});
-		$(shareActive).click(function(){
-			$(".action-toolbar").toggleClass("action-toolbar-raised");
-			$(".hidden-share-bar").toggleClass("share-bar");
-			if(visible == false){
-				visible = true;
-			}
-			else{
-				visible = false;
-			}
-		});
-		/*$(feedbackify).click(function()){
-			//open feedbackify session
-		};*/
-	});
 	</script>
-
+	<div id="feedbackify">
+		<div id="fby-screen" class="fby-screen">
+			<div id="fby-mask" class="fby-mask">
+				<div id="fby-tab-35" class="fby-tab fby-tab-r">
+					<a href="" style="background-color:#FE7A20!important" aria-label="Feedback"></a>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
