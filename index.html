@@ -495,8 +495,8 @@
 			});
 			$('.facebook-icon').click(function(){
 				var url = window.location.href;
-				var title = document.title;
-				window.open("https://www.facebook.com/sharer/sharer.php?u="+url+"&t=");
+				var title =  $(document).attr('title');
+				window.open("https://www.facebook.com/sharer/sharer.php?u="+url+"&t="+title);
 			});
 		/*	(function(){
 				var $content = $('#feedbackify-option').detach();
