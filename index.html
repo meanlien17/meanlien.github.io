@@ -503,7 +503,7 @@
 			$('.pinterest-link').click(function(){
 				var url = window.location.href;
 				var title = $(document).attr('title');
-				var image = document.getElementsByTagName('img')[0];
+				var image = document.getElementsByTagName('img')[0].src;
 				var imageURI = encodeURI(image);
 				window.open("http://pinterest.com/pin/create/bookmarklet/?media="+imageURI+"&url="+url+"&is_video=false&description="+title);
 
