@@ -10,6 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<title>Default : v3.1 Template : Princess Cruises</title>
+	<meta property="og:url" content="welcome to www.meanlien.com" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<!--
@@ -30,7 +31,7 @@
 	<link rel="stylesheet" href="/css/global/cms.css" />
 
 	<script src="/js/global/princess-libs.combined.js"></script>
-
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<!--[if lt IE 9]><script type="text/javascript" src="/js/global/jquery/plugins/respond/respond.min.js"></script>-->
 	<style>
@@ -397,7 +398,7 @@
 								<span class="share-bg">Share</span>
 							</li>
 							<span class="text-change text-white">Share:</span>
-							<a class="toolbar-icon icons toolbar-hover hide facebook-icon facebook-link"
+							<a role="button" class="toolbar-icon icons toolbar-hover hide facebook-icon facebook-link at-svc-facebook"
 								href="#"></a>
 							<a class="toolbar-icon icons toolbar-hover hide pinterest-icon pinterest-link"
 								href="#"></a>
@@ -465,6 +466,8 @@
 			var visible = false;
 			var hideButton = document.getElementById("hide-button");
 			var shareActive = document.getElementById("share-active");
+			var addthis_config = {ui_use_css : false};
+			var addthis_loaded = false;
 		//	var feedbackify = document.getElementById("feedbackify")
 		if(!sessionStorage.getItem('hidden')){
 			sessionStorage.setItem('hidden', 'false');
@@ -499,10 +502,16 @@
 			$('#feedback-btn').click(function(){
 				fby.push(['showForm', '4896']);
 			});
-			/* grabs the URL and title and inputs it in the share URL provided by facebook
+			$('.facebook-link').click(function(){
+				if(addthis_loaded == false){
+					initAddThis();
+					addthis_loaded = true;
+				}
+			});
+			 grabs the URL and title and inputs it in the share URL provided by facebook
 			$('.facebook-link').click(function(){
 				var url = window.location.href;
-				var title =  $(document).attr('title');
+				var title =  $(document).attr('og:title');
 				window.open("https://www.facebook.com/sharer/sharer.php?u="+url+"&t="+title);
 			});
 			Grabs the URL, title, and first img on the page and inputs it into the share URL provided by pinterest.
@@ -512,7 +521,7 @@
 				var image = document.getElementsByTagName('img')[0].src;
 				//var imageURI = encodeURI(image);
 				window.open("http://pinterest.com/pin/create/bookmarklet/?media="+image+"&url="+url+"&is_video=false&description="+title);
-			});*/
+			});
 		});
 	</script>
 	<div id="feedbackify">
