@@ -30,6 +30,7 @@
 	<link rel="stylesheet" href="/css/global/cms.css" />
 
 	<script src="/js/global/princess-libs.combined.js"></script>
+
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<!--[if lt IE 9]><script type="text/javascript" src="/js/global/jquery/plugins/respond/respond.min.js"></script>-->
 	<style>
@@ -401,7 +402,7 @@
 							<a class="toolbar-icon icons toolbar-hover hide pinterest-icon pinterest-link"
 								href="#"></a>
 							<a class="toolbar-icon icons toolbar-hover hide email-icon"
-								href=""></a>
+								href="#"></a>
 								<li class="hidden-share-bar center-align">
 									<a class="icons facebook-alt-icon toolbar-hover facebook-link"
 									href="#"></a>
@@ -420,14 +421,14 @@
 						</li>
 						<li class="toolbar-item toolbar-hover">
 							<a class="toolbar-ask-expert toolbar-link-view link-text"
-							href="">
+							href="https://book.princess.com/captaincircle/planner.page">
 								<span class="toolbar-icon icons hide expert-icon"></span>
 								<span class="contact-expert hide">Contact an Expert</span>
 								<span class="contact-expert hide-before ask-expert">Ask an Expert</span>
 							</a>
 						</li>
-						<li class="toolbar-item toolbar-hover">
-							<a href="#" onclick="fby.push(['showForm', '4896']);return false;" class="toolbar-feedback toolbar-link-view link-text">
+						<li class="toolbar-item toolbar-hover hidden">
+							<a href="#" id="feedback-btn" class="toolbar-feedback toolbar-link-view link-text">
 								<span class="toolbar-icon icons hide feedback-icon"></span>
 								<span class="website-feedback hide">Website Feedback</span>
 								<span class="website-feedback hide-before site-feedback">Site Feedback</span>
@@ -454,10 +455,10 @@
 	<script type="text/javascript">
 		var fby = fby || [];
 		(function () {
-    var f = document.createElement('script'); f.type = 'text/javascript'; f.async = true;
-    f.src = '//cdn.feedbackify.com/f.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(f, s);
-	})();
+	  var f = document.createElement('script'); f.type = 'text/javascript'; f.async = true;
+	  f.src = '//cdn.feedbackify.com/f.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(f, s);
+		})();
 </script>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -495,31 +496,29 @@
 					visible = false;
 				}
 			});
+			$('#feedback-btn').click(function(){
+				fby.push(['showForm', '4896']);
+			});
+			/* grabs the URL and title and inputs it in the share URL provided by facebook
 			$('.facebook-link').click(function(){
 				var url = window.location.href;
 				var title =  $(document).attr('title');
 				window.open("https://www.facebook.com/sharer/sharer.php?u="+url+"&t="+title);
 			});
+			Grabs the URL, title, and first img on the page and inputs it into the share URL provided by pinterest.
 			$('.pinterest-link').click(function(){
 				var url = window.location.href;
 				var title = $(document).attr('title');
 				var image = document.getElementsByTagName('img')[0].src;
 				//var imageURI = encodeURI(image);
 				window.open("http://pinterest.com/pin/create/bookmarklet/?media="+image+"&url="+url+"&is_video=false&description="+title);
-
-			});
-		/*	(function(){
-				var $content = $('#feedbackify-option').detach();
-				$(feedbackify).on('click', function(){
-					modal.open({content: $content, width:600, height:300});
-				});
 			});*/
 		});
 	</script>
 	<div id="feedbackify">
 		<div id="fby-screen" class="fby-screen">
 			<div id="fby-mask" class="fby-mask">
-				<div id="fby-tab-35" class="fby-tab fby-tab-r">
+				<div id="fby-tab-4896" class="fby-tab fby-tab-r">
 					<a href="" style="background-color:#FE7A20!important" aria-label="Feedback"></a>
 				</div>
 			</div>
