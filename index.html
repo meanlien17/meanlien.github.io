@@ -398,12 +398,15 @@
 								<span class="share-bg">Share</span>
 							</li>
 							<span class="text-change text-white">Share:</span>
-							<a role="button" class="toolbar-icon icons toolbar-hover hide facebook-icon facebook-link addthis_button_facebook"
+							<a role="button" class="toolbar-icon icons toolbar-hover hide facebook-icon facebook-link addthis_button_facebook at300b"
+								title="Facebook"
+								href="#" tabindex="0"></a>
+							<a class="toolbar-icon icons toolbar-hover hide pinterest-icon pinterest-link addthis_button_pinterest_share at300b"
+								title="Pinterest"
 								href="#"></a>
-							<a class="toolbar-icon icons toolbar-hover hide pinterest-icon pinterest-link"
-								href="#"></a>
-							<a class="toolbar-icon icons toolbar-hover hide email-icon"
-								href="#"></a>
+							<a class="toolbar-icon icons toolbar-hover hide email-icon addthis_button_email at300b"
+								target="_blank" title="Email"
+								href="#" tabindex="1000"></a>
 								<li class="hidden-share-bar center-align">
 									<a class="icons facebook-alt-icon toolbar-hover facebook-link"
 									href="#"></a>
@@ -502,12 +505,12 @@
 			$('#feedback-btn').click(function(){
 				fby.push(['showForm', '4896']);
 			});
-		/*	$('.facebook-link').click(function(){
+			$('.facebook-link').click(function(){
 				if(addthis_loaded == false){
 					initAddThis();
 					addthis_loaded = true;
 				}
-			});*/
+			});
 			// grabs the URL and title and inputs it in the share URL provided by facebook
 			/*$('.facebook-link').click(function(){
 				var url = window.location.href;
