@@ -398,7 +398,7 @@
 								<span class="share-bg">Share</span>
 							</li>
 							<span class="text-change text-white">Share:</span>
-							<a role="button" class="toolbar-icon icons toolbar-hover hide facebook-icon facebook-link at-svc-facebook"
+							<a role="button" class="toolbar-icon icons toolbar-hover hide facebook-icon facebook-link addthis_button_facebook"
 								href="#"></a>
 							<a class="toolbar-icon icons toolbar-hover hide pinterest-icon pinterest-link"
 								href="#"></a>
@@ -429,7 +429,7 @@
 							</a>
 						</li>
 						<li class="toolbar-item toolbar-hover hidden">
-							<a href="#" id="feedback-btn" class="toolbar-feedback toolbar-link-view link-text">
+							<a href="" id="feedback-btn" class="toolbar-feedback toolbar-link-view link-text">
 								<span class="toolbar-icon icons hide feedback-icon"></span>
 								<span class="website-feedback hide">Website Feedback</span>
 								<span class="website-feedback hide-before site-feedback">Site Feedback</span>
@@ -509,9 +509,10 @@
 				}
 			});*/
 			// grabs the URL and title and inputs it in the share URL provided by facebook
-			$('.facebook-link').click(function(){
+			/*$('.facebook-link').click(function(){
 				var url = window.location.href;
-				var title =  $(document).attr('og:title');
+				//var title =  $(document).attr('title');
+				var title = $('meta[property="og:title"]').attr('content');
 				window.open("https://www.facebook.com/sharer/sharer.php?u="+url+"&t="+title);
 			});
 			//Grabs the URL, title, and first img on the page and inputs it into the share URL provided by pinterest.
@@ -521,7 +522,7 @@
 				var image = document.getElementsByTagName('img')[0].src;
 				//var imageURI = encodeURI(image);
 				window.open("http://pinterest.com/pin/create/bookmarklet/?media="+image+"&url="+url+"&is_video=false&description="+title);
-			});
+			});*/
 		});
 	</script>
 	<div id="feedbackify">
