@@ -389,11 +389,10 @@
 						<br />
 						<br />
 						<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<div class="addthis_sharing_toolbox"></div>
 		</main>
 			<div class="action-toolbar-wrapper clearfix" style="bottom: 0px;"><!--for screen size-->
 				<div class="action-toolbar gotham-xn-medium"><!--for sticky-->
-					<ul class="action-toolbar-list clearfix">
+					<ul class="action-toolbar-list clearfix addthis_sharing_toolbox">
 						<li class=" share-links">
 							<li class="share-button toolbar-item toolbar-hover toolbar-button" id="share-active">
 								<span class="share-bg">Share</span>
@@ -457,7 +456,7 @@
 	<script src="/js/global/princess-plugins.combined.js"></script>
 	<script src="/js/global/responsive_header_footer.js"></script>
 	<script src="/js/global/cms/cms.js"></script>
-	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5791512c13eff62c"></script>
 	<script type="text/javascript">
 		var fby = fby || [];
 		(function () {
@@ -517,7 +516,7 @@
   				FB.ui({
     			method: 'share',
     			mobile_iframe: true,
-    			href: 'https://developers.facebook.com/docs/',
+    			href: window.location.href,
   				}, function(response){});
 				}
 				/*
