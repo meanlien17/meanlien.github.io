@@ -31,7 +31,6 @@
 	<link rel="stylesheet" href="/css/global/cms.css" />
 
 	<script src="/js/global/princess-libs.combined.js"></script>
-	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<!--[if lt IE 9]><script type="text/javascript" src="/js/global/jquery/plugins/respond/respond.min.js"></script>-->
 	<style>
@@ -389,6 +388,8 @@
 						<br />
 						<br />
 						<br />
+						<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_sharing_toolbox"></div>
 		</main>
 			<div class="action-toolbar-wrapper clearfix" style="bottom: 0px;"><!--for screen size-->
 				<div class="action-toolbar gotham-xn-medium"><!--for sticky-->
@@ -412,7 +413,7 @@
 									href="#"></a>
 									<a class="icons pinterest-alt-icon toolbar-hover pinterest-link"
 									href="#"></a>
-									<a class="icons email-alt-icon toolbar-hover" href=""></a>
+									<a class="icons email-alt-icon toolbar-hover" href="#"></a>
 								</li>
 						</li>
 						<li class="toolbar-item toolbar-hover hide brochure">
@@ -456,6 +457,7 @@
 	<script src="/js/global/princess-plugins.combined.js"></script>
 	<script src="/js/global/responsive_header_footer.js"></script>
 	<script src="/js/global/cms/cms.js"></script>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script>
 	<script type="text/javascript">
 		var fby = fby || [];
 		(function () {
@@ -471,7 +473,6 @@
 			var shareActive = document.getElementById("share-active");
 			var addthis_config = {ui_use_css : false};
 			var addthis_loaded = false;
-		//	var feedbackify = document.getElementById("feedbackify")
 		if(!sessionStorage.getItem('hidden')){
 			sessionStorage.setItem('hidden', 'false');
 		}
@@ -512,7 +513,15 @@
 				}
 			});
 			// grabs the URL and title and inputs it in the share URL provided by facebook
-			/*$('.facebook-link').click(function(){
+			document.getElementByClass('facebook-link').onclick = function() {
+  				FB.ui({
+    			method: 'share',
+    			mobile_iframe: true,
+    			href: 'https://developers.facebook.com/docs/',
+  				}, function(response){});
+				}
+				/*
+			$('.facebook-link').click(function(){
 				var url = window.location.href;
 				//var title =  $(document).attr('title');
 				var title = $('meta[property="og:title"]').attr('content');
@@ -528,14 +537,5 @@
 			});*/
 		});
 	</script>
-<!--	<div id="feedbackify">
-		<div id="fby-screen" class="fby-screen">
-			<div id="fby-mask" class="fby-mask">
-				<div id="fby-tab-4896" class="fby-tab fby-tab-r">
-					<a href="" style="background-color:#FE7A20!important" aria-label="Feedback"></a>
-				</div>
-			</div>
-		</div>
-	</div>-->
 </body>
 </html>
