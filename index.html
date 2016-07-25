@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<title>Default : v3.1 Template : Princess Cruises</title>
-	<meta property="og:url" content="" />
+	<meta property="og:url" content="welcome to www.meanlien.com" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<!--
@@ -31,6 +31,7 @@
 	<link rel="stylesheet" href="/css/global/cms.css" />
 
 	<script src="/js/global/princess-libs.combined.js"></script>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<!--[if lt IE 9]><script type="text/javascript" src="/js/global/jquery/plugins/respond/respond.min.js"></script>-->
 	<style>
@@ -150,7 +151,7 @@
 		}
 		.icons{
 			height: 30px;
-			background-image: url(./action-toolbar-icons.png);
+			background-image: url(../images/global/action-toolbar-icons.png);
 			position: relative;
 			display: inline-block;
 		}
@@ -228,11 +229,9 @@
 			height: 40px;
 			list-style-type: none;
 		}
-		span.at-icon-wrapper{
-			display: none;
-		}
-		.at-icon, .at-icon-pinterest_share, .at-icon-wrapper{
-			display: none;
+
+		.center-align{
+			text-align: center;
 		}
 		@media screen and (max-width: 768px){
 			.hide{
@@ -390,7 +389,6 @@
 						<br />
 						<br />
 						<br />
-						<!-- Go to www.addthis.com/dashboard to customize your tools -->
 		</main>
 			<div class="action-toolbar-wrapper clearfix" style="bottom: 0px;"><!--for screen size-->
 				<div class="action-toolbar gotham-xn-medium"><!--for sticky-->
@@ -402,20 +400,19 @@
 							<span class="text-change text-white">Share:</span>
 							<a role="button" class="toolbar-icon icons toolbar-hover hide facebook-icon facebook-link addthis_button_facebook at300b"
 								title="Facebook"
-								href="#" tabindex="0"></a>
+								href="#" tabindex=""></a>
 							<a class="toolbar-icon icons toolbar-hover hide pinterest-icon pinterest-link addthis_button_pinterest_share at300b"
 								title="Pinterest"
 								href="#"></a>
-							<a class="toolbar-icon icons toolbar-hover hide email-icon email-link addthis_button_email at300b"
+							<a class="toolbar-icon icons toolbar-hover hide email-icon addthis_button_email at300b"
 								target="_blank" title="Email"
 								href="#" tabindex="1000"></a>
-								<li class="hidden-share-bar center-align ">
-									<a class="icons facebook-alt-icon toolbar-hover facebook-link addthis_button_facebook at300b"
+								<li class="hidden-share-bar center-align">
+									<a class="icons facebook-alt-icon toolbar-hover facebook-link"
 									href="#"></a>
-									<a class="icons pinterest-alt-icon toolbar-hover pinterest-link addthis_button_pinterest_share at300b"
+									<a class="icons pinterest-alt-icon toolbar-hover pinterest-link"
 									href="#"></a>
-									<a class="icons email-alt-icon toolbar-hover addthis_button_email at300b"
-									href="#"></a>
+									<a class="icons email-alt-icon toolbar-hover" href=""></a>
 								</li>
 						</li>
 						<li class="toolbar-item toolbar-hover hide brochure">
@@ -459,7 +456,6 @@
 	<script src="/js/global/princess-plugins.combined.js"></script>
 	<script src="/js/global/responsive_header_footer.js"></script>
 	<script src="/js/global/cms/cms.js"></script>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5791512c13eff62c"></script>
 	<script type="text/javascript">
 		var fby = fby || [];
 		(function () {
@@ -467,7 +463,7 @@
 	  f.src = '//cdn.feedbackify.com/f.js';
 	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(f, s);
 		})();
-	</script>
+</script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var visible = false;
@@ -475,8 +471,7 @@
 			var shareActive = document.getElementById("share-active");
 			var addthis_config = {ui_use_css : false};
 			var addthis_loaded = false;
-			var addthis_config={ui_use_css: false};
-
+		//	var feedbackify = document.getElementById("feedbackify")
 		if(!sessionStorage.getItem('hidden')){
 			sessionStorage.setItem('hidden', 'false');
 		}
@@ -515,23 +510,9 @@
 					initAddThis();
 					addthis_loaded = true;
 				}
-			});
-			$('.pinterest-link').click(function(){
-				if(addthis_loaded == false){
-					initAddThis();
-					addthis_loaded = true;
-				}
-			});
-			$('.email-link').click(function(){
-				if(addthis_loaded == false){
-					initAddThis();
-					addthis_loaded = true;
-				}
 			});*/
-
 			// grabs the URL and title and inputs it in the share URL provided by facebook
-				/*
-			$('.facebook-link').click(function(){
+			/*$('.facebook-link').click(function(){
 				var url = window.location.href;
 				//var title =  $(document).attr('title');
 				var title = $('meta[property="og:title"]').attr('content');
@@ -547,5 +528,14 @@
 			});*/
 		});
 	</script>
+	<div id="feedbackify">
+		<div id="fby-screen" class="fby-screen">
+			<div id="fby-mask" class="fby-mask">
+				<div id="fby-tab-4896" class="fby-tab fby-tab-r">
+					<a href="" style="background-color:#FE7A20!important" aria-label="Feedback"></a>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
