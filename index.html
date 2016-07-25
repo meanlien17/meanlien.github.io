@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<title>Default : v3.1 Template : Princess Cruises</title>
-	<meta property="og:url" content="welcome to www.meanlien.com" />
+	<meta property="og:url" content="" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<!--
@@ -409,7 +409,7 @@
 							<a class="toolbar-icon icons toolbar-hover hide pinterest-icon pinterest-link addthis_button_pinterest_share at300b"
 								title="Pinterest"
 								href="#"></a>
-							<a class="toolbar-icon icons toolbar-hover hide email-icon addthis_button_email at300b"
+							<a class="toolbar-icon icons toolbar-hover hide email-icon email-link addthis_button_email at300b"
 								target="_blank" title="Email"
 								href="#" tabindex="1000"></a>
 								<li class="hidden-share-bar center-align ">
@@ -417,7 +417,7 @@
 									href="#"></a>
 									<a class="icons pinterest-alt-icon toolbar-hover pinterest-link addthis_button_pinterest_share at300b"
 									href="#"></a>
-									<a class="icons email-alt-icon toolbar-hover addthis_button_email at300b" 
+									<a class="icons email-alt-icon toolbar-hover addthis_button_email at300b"
 									href="#"></a>
 								</li>
 						</li>
@@ -462,7 +462,8 @@
 	<script src="/js/global/princess-plugins.combined.js"></script>
 	<script src="/js/global/responsive_header_footer.js"></script>
 	<script src="/js/global/cms/cms.js"></script>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d"></script>
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#async=1#pubid=ra-5796297c9cb7080d"></script>
 	<script type="text/javascript">
 		var fby = fby || [];
 		(function () {
@@ -478,6 +479,8 @@
 			var shareActive = document.getElementById("share-active");
 			var addthis_config = {ui_use_css : false};
 			var addthis_loaded = false;
+			var addthis_config={ui_use_css: false}
+		}
 		if(!sessionStorage.getItem('hidden')){
 			sessionStorage.setItem('hidden', 'false');
 		}
@@ -517,14 +520,19 @@
 					addthis_loaded = true;
 				}
 			});
-			// grabs the URL and title and inputs it in the share URL provided by facebook
-			document.getElementByClass('facebook-link').onclick = function() {
-  				FB.ui({
-    			method: 'share',
-    			mobile_iframe: true,
-    			href: window.location.href,
-  				}, function(response){});
+			$('.pinterest-link').click(function(){
+				if(addthis_loaded == false){
+					initAddThis();
+					addthis_loaded = true;
 				}
+			});
+			$('.email-link').click(function(){
+				if(addthis_loaded == false){
+					initAddThis();
+					addthis_loaded = true;
+				}
+			});
+			// grabs the URL and title and inputs it in the share URL provided by facebook
 				/*
 			$('.facebook-link').click(function(){
 				var url = window.location.href;
