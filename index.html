@@ -457,7 +457,8 @@
 	<script src="/js/global/princess-plugins.combined.js"></script>
 	<script src="/js/global/responsive_header_footer.js"></script>
 	<script src="/js/global/cms/cms.js"></script>
-	<script src="s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d#async=1"></script>
+
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d#async=1"></script>
 	<script type="text/javascript">
 		var fby = fby || [];
 		(function () {
@@ -508,21 +509,18 @@
 			});
 			$('.facebook-link').click(function(){
 				if(addthis_loaded == false){
-					$.getScript("s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d")
 					initAddThis();
 					addthis_loaded = true;
 				}
 			});
 			$('.pinterest-link').click(function(){
 				if(addthis_loaded == false){
-					$.getScript("s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d")
 					initAddThis();
 					addthis_loaded = true;
 				}
 			});
 			$('.email-link').click(function(){
 				if(addthis_loaded == false){
-					$.getScript("s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d")
 					initAddThis();
 					addthis_loaded = true;
 				}
