@@ -145,7 +145,7 @@
 		}
 		.icons{
 			height: 30px;
-			background-image: url(../images/global/action-toolbar-icons.png);
+			background-image: url(./action-toolbar-icons.png);
 			position: relative;
 			display: inline-block;
 		}
@@ -515,12 +515,14 @@
 			});
 			$('.pinterest-link').click(function(){
 				if(addthis_loaded == false){
+					$.getScript("s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d")
 					initAddThis();
 					addthis_loaded = true;
 				}
 			});
 			$('.email-link').click(function(){
 				if(addthis_loaded == false){
+					$.getScript("s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d")
 					initAddThis();
 					addthis_loaded = true;
 				}
