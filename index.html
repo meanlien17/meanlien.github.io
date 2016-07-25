@@ -453,7 +453,6 @@
 	<script src="/js/global/princess-plugins.combined.js"></script>
 	<script src="/js/global/responsive_header_footer.js"></script>
 	<script src="/js/global/cms/cms.js"></script>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d"></script>
 	<script type="text/javascript">
 		var fby = fby || [];
 		(function () {
@@ -461,7 +460,7 @@
 	  f.src = '//cdn.feedbackify.com/f.js';
 	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(f, s);
 		})();
-</script>
+	</script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var visible = false;
@@ -469,8 +468,8 @@
 			var shareActive = document.getElementById("share-active");
 			var addthis_config = {ui_use_css : false};
 			var addthis_loaded = false;
-			//var addthis_config={ui_use_css: false};
-		}
+			var addthis_config={ui_use_css: false};
+
 		if(!sessionStorage.getItem('hidden')){
 			sessionStorage.setItem('hidden', 'false');
 		}
@@ -522,6 +521,7 @@
 					addthis_loaded = true;
 				}
 			});
+
 			// grabs the URL and title and inputs it in the share URL provided by facebook
 				/*
 			$('.facebook-link').click(function(){
@@ -540,5 +540,6 @@
 			});*/
 		});
 	</script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d"></script>
 </body>
 </html>
