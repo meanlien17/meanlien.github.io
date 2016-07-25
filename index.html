@@ -31,7 +31,6 @@
 	<link rel="stylesheet" href="/css/global/cms.css" />
 
 	<script src="/js/global/princess-libs.combined.js"></script>
-	<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#async=1"></script>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<!--[if lt IE 9]><script type="text/javascript" src="/js/global/jquery/plugins/respond/respond.min.js"></script>-->
 	<style>
@@ -74,7 +73,6 @@
 			padding-bottom: 7px;
 			border-left: 1px solid white;
 			margin-right: -5px;
-
 		}
 		.action-toolbar{
 			position: fixed;
@@ -87,7 +85,6 @@
 			text-align: center;
 			z-index: 1000;
 		}
-
 		.action-toolbar-lowered{
 			position: fixed;
 			bottom: -30px;
@@ -97,7 +94,6 @@
 			opacity: 0.8;
 			text-align: center;
 			z-index: 1000;
-
 		}
 		.toolbar-hide{
 			position: absolute;
@@ -131,7 +127,6 @@
 			display: inline-block;
 			text-decoration: none;
 			color: white;
-
 		}
 		.toolbar-hide-text{
 			display: block;
@@ -139,7 +134,6 @@
 		.share-button{
 			display: none;
 			border: none;
-
 		}
 		.share-links{
 			display: inline-block;
@@ -181,6 +175,9 @@
 			background-position: -200px 0px;
 			top: 5px;
 			margin: 0px 10px;
+		}
+		.addthis_button_pinterest_share{
+			background-color: #787878;
 		}
 		.email-icon{
 			width: 30px;
@@ -229,13 +226,14 @@
 			height: 40px;
 			list-style-type: none;
 		}
+		.center-align{
+			text-align: center;
+		}
 		span.at-icon-wrapper{
 			display: none;
 		}
 		.at-icon, .at-icon-pinterest_share, .at-icon-wrapper{
 			display: none;
-		.center-align{
-			text-align: center;
 		}
 		@media screen and (max-width: 768px){
 			.hide{
@@ -269,7 +267,6 @@
 			.toolbar-item + .toolbar-item{
 				border-left: 1px solid white;
 			}
-
 			.share-bar{
 				position: fixed;
 				bottom: 0px;
@@ -288,7 +285,6 @@
 				opacity: 0.8;
 				text-align: center;
 				z-index: 1000;
-
 			}
 		}
 		@media screen and (max-width: 500px){
@@ -393,6 +389,7 @@
 						<br />
 						<br />
 						<br />
+						<!-- Go to www.addthis.com/dashboard to customize your tools -->
 		</main>
 			<div class="action-toolbar-wrapper clearfix" style="bottom: 0px;"><!--for screen size-->
 				<div class="action-toolbar gotham-xn-medium"><!--for sticky-->
@@ -404,19 +401,20 @@
 							<span class="text-change text-white">Share:</span>
 							<a role="button" class="toolbar-icon icons toolbar-hover hide facebook-icon facebook-link addthis_button_facebook at300b"
 								title="Facebook"
-								href="#" tabindex=""></a>
+								href="#" tabindex="0"></a>
 							<a class="toolbar-icon icons toolbar-hover hide pinterest-icon pinterest-link addthis_button_pinterest_share at300b"
 								title="Pinterest"
 								href="#"></a>
 							<a class="toolbar-icon icons toolbar-hover hide email-icon addthis_button_email at300b"
 								target="_blank" title="Email"
 								href="#" tabindex="1000"></a>
-								<li class="hidden-share-bar center-align">
-									<a class="icons facebook-alt-icon toolbar-hover facebook-link"
+								<li class="hidden-share-bar center-align ">
+									<a class="icons facebook-alt-icon toolbar-hover facebook-link addthis_button_facebook at300b"
 									href="#"></a>
-									<a class="icons pinterest-alt-icon toolbar-hover pinterest-link"
+									<a class="icons pinterest-alt-icon toolbar-hover pinterest-link addthis_button_pinterest_share at300b"
 									href="#"></a>
-									<a class="icons email-alt-icon toolbar-hover" href=""></a>
+									<a class="icons email-alt-icon toolbar-hover addthis_button_email at300b"
+									href="#"></a>
 								</li>
 						</li>
 						<li class="toolbar-item toolbar-hover hide brochure">
@@ -460,6 +458,7 @@
 	<script src="/js/global/princess-plugins.combined.js"></script>
 	<script src="/js/global/responsive_header_footer.js"></script>
 	<script src="/js/global/cms/cms.js"></script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5791512c13eff62c"></script>
 	<script type="text/javascript">
 		var fby = fby || [];
 		(function () {
@@ -475,7 +474,6 @@
 			var shareActive = document.getElementById("share-active");
 			var addthis_config = {ui_use_css : false};
 			var addthis_loaded = false;
-
 		if(!sessionStorage.getItem('hidden')){
 			sessionStorage.setItem('hidden', 'false');
 		}
@@ -509,14 +507,22 @@
 			$('#feedback-btn').click(function(){
 				fby.push(['showForm', '4896']);
 			});
-		/*	$('.facebook-link').click(function(){
+			$('.facebook-link').click(function(){
 				if(addthis_loaded == false){
 					initAddThis();
 					addthis_loaded = true;
 				}
-			});*/
+			});
 			// grabs the URL and title and inputs it in the share URL provided by facebook
-			/*$('.facebook-link').click(function(){
+			document.getElementByClass('facebook-link').onclick = function() {
+  				FB.ui({
+    			method: 'share',
+    			mobile_iframe: true,
+    			href: window.location.href,
+  				}, function(response){});
+				}
+				/*
+			$('.facebook-link').click(function(){
 				var url = window.location.href;
 				//var title =  $(document).attr('title');
 				var title = $('meta[property="og:title"]').attr('content');
@@ -532,14 +538,5 @@
 			});*/
 		});
 	</script>
-	<div id="feedbackify">
-		<div id="fby-screen" class="fby-screen">
-			<div id="fby-mask" class="fby-mask">
-				<div id="fby-tab-4896" class="fby-tab fby-tab-r">
-					<a href="" style="background-color:#FE7A20!important" aria-label="Feedback"></a>
-				</div>
-			</div>
-		</div>
-	</div>
 </body>
 </html>
