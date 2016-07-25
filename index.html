@@ -145,7 +145,7 @@
 		}
 		.icons{
 			height: 30px;
-			background-image: url(./action-toolbar-icons.png);
+			background-image: url(../images/global/action-toolbar-icons.png);
 			position: relative;
 			display: inline-block;
 		}
@@ -233,6 +233,7 @@
 		.at-icon, .at-icon-pinterest_share, .at-icon-wrapper{
 			display: none;
 		}
+
 		@media screen and (max-width: 768px){
 			.hide{
 				display: none;
@@ -406,7 +407,7 @@
 							<a class="toolbar-icon icons toolbar-hover hide email-icon email-link addthis_button_email at300b"
 								target="_blank" title="Email"
 								href="#" tabindex="1000"></a>
-								<li class="hidden-share-bar center-align ">
+								<li class="hidden-share-bar center-align">
 									<a class="icons facebook-alt-icon toolbar-hover facebook-link addthis_button_facebook at300b"
 									href="#"></a>
 									<a class="icons pinterest-alt-icon toolbar-hover pinterest-link addthis_button_pinterest_share at300b"
@@ -457,7 +458,6 @@
 	<script src="/js/global/responsive_header_footer.js"></script>
 	<script src="/js/global/cms/cms.js"></script>
 
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d#async=1"></script>
 	<script type="text/javascript">
 		var fby = fby || [];
 		(function () {
@@ -508,6 +508,7 @@
 			});
 			$('.facebook-link').click(function(){
 				if(addthis_loaded == false){
+					$.getScript("s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d")
 					initAddThis();
 					addthis_loaded = true;
 				}
