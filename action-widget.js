@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
 		if ($('.action-share').length > 0) {
 			initShareAction($('#content'));
 		}
-		
+
 		//initialize the action widget brochure button if link is in nav, or when brochureReady is triggered.
 		if ($('.action-brochure').length > 0) {
 			if (localeData == undefined || localeData == null) {
@@ -38,8 +38,8 @@ jQuery(document).ready(function ($) {
 			if (typeof dataLayer == 'object') {
 				dataLayer.push({
 					'event': 'action-widget-click',
-					'action-option': String(actionOption), 
-					'action-text': String(actionText) 
+					'action-option': String(actionOption),
+					'action-text': String(actionText)
 				});
 			}
 			if (actionOption == 'cruise with me' || actionOption == 'search cruises' || actionOption == 'get brochure') {
@@ -59,10 +59,10 @@ function initShareAction($container) {
 		$actionShareBtn.toggleClass('active').trigger('blur').closest('.article-header').find('.action-share-drawer').slideToggle(function () {
 			var actionStatus = '';
 			if ($(this).is(':visible')) {
-				dataLayer.push({ 
-					'event': 'action-drawer-open', 
+				dataLayer.push({
+					'event': 'action-drawer-open',
 					'action-drawer-content': String('social share links')
-				}); 
+				});
 			}
 		});
 	});
@@ -93,7 +93,7 @@ function displaySpecialOfferAction($container, specialOffersFlag) {
 		var specialOffersUrl = $bookURL + '/captaincircle/specialOfferRegistration.page?popupCondition=special-offers-button-click&pageSection=action-widget&formType=popup';
 		//show the special offer button and create a custom click event
 		if (window.self === window.top) {
-			$container.find('.action-offers').addClass('open-mfp mfp-iframe').prop('href',specialOffersUrl).attr({'data-mfp-width':'640px','data-mfp-height':'690px','data-mfp-main-class':'special-offers'}).closest('.action-item').removeClass('hidden');		
+			$container.find('.action-offers').addClass('open-mfp mfp-iframe').prop('href',specialOffersUrl).attr({'data-mfp-width':'640px','data-mfp-height':'690px','data-mfp-main-class':'special-offers'}).closest('.action-item').removeClass('hidden');
 		} else {
 			$container.on('click','.action-offers', function () {
 				e.preventDefault();
@@ -115,3 +115,92 @@ function initBrochureAction($container) {
 		}
 	}
 }
+
+//Action Toolbar Javascript
+
+
+	var fby = fby || [];
+	(function () {
+	var f = document.createElement('script'); f.type = 'text/javascript'; f.async = true;
+	f.src = '//cdn.feedbackify.com/f.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(f, s);
+	})();
+
+
+	$(document).ready(function(){
+		var visible = false;
+		var hideButton = document.getElementById("hide-button");
+		var shareActive = document.getElementById("share-active");
+		var addthis_config = {ui_use_css : false};
+		var addthis_loaded = false;
+	if(!sessionStorage.getItem('hidden')){
+		sessionStorage.setItem('hidden', 'false');
+	}
+		if(sessionStorage.getItem('hidden')=='true'){
+				$(".action-toolbar").toggleClass("action-toolbar-lowered ");
+				$(".chevron-icon").toggleClass("unhide-icon");
+		}
+		$(hideButton).click(function(){
+			$(".action-toolbar").toggleClass("action-toolbar-lowered ");
+			$(".chevron-icon").toggleClass("unhide-icon");
+			if(visible == true){
+				$(".hidden-share-bar").toggleClass("share-bar");
+				$(".action-toolbar").toggleClass("action-toolbar-raised");
+			}
+			if(sessionStorage.getItem('hidden')== "false"){
+				sessionStorage.setItem('hidden', 'true');
+			}else{
+				sessionStorage.setItem('hidden', 'false');
+			}
+		});
+		$(shareActive).click(function(){
+			$(".action-toolbar").toggleClass("action-toolbar-raised");
+			$(".hidden-share-bar").toggleClass("share-bar");
+			if(visible == false){
+				visible = true;
+			}
+			else{
+				visible = false;
+			}
+		});
+		$('#feedback-btn').click(function(){
+			fby.push(['showForm', '4896']);
+		});
+		$('.facebook-link').click(function(){
+			if(addthis_loaded == false){
+				initAddThis();
+				addthis_loaded = true;
+			}
+		});
+		$('.pinterest-link').click(function(){
+			if(addthis_loaded == false){
+				initAddThis();
+				addthis_loaded = true;
+			}
+		});
+		$('.email-link').click(function(){
+			if(addthis_loaded == false){
+				initAddThis();
+				addthis_loaded = true;
+			}
+		});
+		function initAddThis(){
+			addthis.init();
+		};
+		// grabs the URL and title and inputs it in the share URL provided by facebook
+			/*
+		$('.facebook-link').click(function(){
+			var url = window.location.href;
+			//var title =  $(document).attr('title');
+			var title = $('meta[property="og:title"]').attr('content');
+			window.open("https://www.facebook.com/sharer/sharer.php?u="+url+"&t="+title);
+		});
+		//Grabs the URL, title, and first img on the page and inputs it into the share URL provided by pinterest.
+		$('.pinterest-link').click(function(){
+			var url = window.location.href;
+			var title = $(document).attr('title');
+			var image = document.getElementsByTagName('img')[0].src;
+			//var imageURI = encodeURI(image);
+			window.open("http://pinterest.com/pin/create/bookmarklet/?media="+image+"&url="+url+"&is_video=false&description="+title);
+		});*/
+	});
