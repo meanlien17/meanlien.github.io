@@ -259,6 +259,9 @@
 	font-family:'Gotham XNarrow SSm 5r', Arial, Helvetica, sans-serif;
 	z-index: 1000;
 }
+.gotham-xn-medium{
+	font-family:'Gotham XNarrow SSm 5r', Arial, Helvetica, sans-serif;
+}
 .link-text{
 	padding: 0px 20px 7px;
 	margin-bottom: -7px;
@@ -315,8 +318,19 @@
 	padding-bottom: 10px;
 	z-index: 1;
 }
-.toolbar-hide-text{
+.toolbar-hide-lower{
+	position: absolute;
+	right: 10px;
+	top: -20px;
+	border-radius: 3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	width: 70px;
+	height: 40px;
+	padding-top: 0px;
 	padding-bottom: 10px;
+	padding-top: 4px;
+	z-index: 1;
 }
 .toolbar-button {
 	background-color:#787978;
@@ -403,9 +417,13 @@
 	background-position: 0px -20px;
 }
 .unhide-icon{
-	width: 20px;
+	display:inline-block;
+	width: 18px;
 	height: 18px;
 	background-position: 0px -1px;
+	padding-top: 0px;
+	margin-top: 0px;
+	margin-bottom: -5px;
 }
 .brochure-icon{
 	width: 25px;
@@ -441,6 +459,13 @@ span.at-icon-wrapper{
 }
 .at-icon, .at-icon-pinterest_share, .at-icon-wrapper{
 	display: none;
+}
+.show-text{
+	display: none;
+}
+.show{
+	display: inline-block;
+	padding-bottom: 5px;
 }
 
 @media screen and (max-width: 767px){
@@ -494,8 +519,21 @@ span.at-icon-wrapper{
 		text-align: center;
 		z-index: 1000;
 	}
-}
-@media screen and (max-width: 500px){
+	.show{
+		display: none;
+	}
+	.toolbar-hide-lower{
+		position: absolute;
+		right: 10px;
+		top: -25px;
+		border-radius: 3px;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		width: 50px;
+		height: 45px;
+		padding-bottom: 10px;
+		z-index: 1;
+	}
 	.toolbar-hide{
 		position: absolute;
 		left: 15px;
@@ -518,8 +556,5 @@ span.at-icon-wrapper{
 		border-radius: 3px 3px 0px 0px;
 		width: 40px;
 		z-index: 1;
-	}
-	.toolbar-hide-text{
-		display: none;
 	}
 }
