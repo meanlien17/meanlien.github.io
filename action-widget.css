@@ -201,7 +201,7 @@
 	.action-share-drawer {
 		text-align: right;
 	}
-	
+
 }
 @media screen and (min-width: 960px) {
 	.full-width .action-share-drawer {
@@ -225,18 +225,301 @@
 	display: inline-block;
 	vertical-align: middle;
 }
-.addthis_default_style .at300b, 
-.addthis_default_style .at300bo, 
+.addthis_default_style .at300b,
+.addthis_default_style .at300bo,
 .addthis_default_style .at300m {
     padding: 0;
 }
-.addthis_default_style .addthis_separator, 
-.addthis_default_style .at300b, 
-.addthis_default_style .at300bo, 
-.addthis_default_style .at300m, 
+.addthis_default_style .addthis_separator,
+.addthis_default_style .at300b,
+.addthis_default_style .at300bo,
+.addthis_default_style .at300m,
 .addthis_default_style .at300bs {
     float: right;
 }
 .addthis_default_style .addthis_counter {
     float: right;
+}
+
+/*Action Toolbar CSS*/
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+.image{
+	width: 100%;
+}
+.action-toolbar-wrapper {
+	font-family:'Gotham XNarrow SSm 5r', Arial, Helvetica, sans-serif;
+	z-index: 1000;
+}
+.link-text{
+	padding: 0px 20px 7px;
+	margin-bottom: -7px;
+}
+.toolbar-item{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	font-size: .875em;
+	margin-right: -5px;
+}
+.toolbar-hover:hover{
+	background-color: #484848
+}
+.toolbar-item + .toolbar-item{
+	padding-bottom: 7px;
+	border-left: 1px solid white;
+}
+.brochure{
+	padding-bottom: 7px;
+	border-left: 1px solid white;
+	margin-right: -5px;
+}
+.action-toolbar{
+	position: fixed;
+	display:inline-block;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: #787978;
+	opacity: 0.8;
+	text-align: center;
+	z-index: 1000;
+}
+.action-toolbar-lowered{
+	position: fixed;
+	bottom: -30px;
+	left: 0px;
+	width: 100%;
+	background-color: #787978;
+	opacity: 0.8;
+	text-align: center;
+	z-index: 1000;
+}
+.toolbar-hide{
+	position: absolute;
+	right: 10px;
+	top: -15px;
+	border-radius: 3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	width: 50px;
+	height: 45px;
+	padding-bottom: 10px;
+	z-index: 1;
+}
+.toolbar-hide-text{
+	padding-bottom: 10px;
+}
+.toolbar-button {
+	background-color:#787978;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+.text-white{
+	color: white;
+}
+.action-toolbar-list{
+	padding: 0px;
+	margin: 0px;
+}
+.toolbar-link-view{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+}
+.toolbar-hide-text{
+	display: block;
+}
+.share-button{
+	display: none;
+	border: none;
+}
+.share-links{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	margin:0px;
+	padding: 0px;
+	z-index: 1000;
+}
+.icons{
+	height: 30px;
+	background-image: url(../images/global/action-toolbar-icons.png);
+	position: relative;
+	display: inline-block;
+}
+.hide-before{
+	display: none;
+}
+.facebook-icon{
+	width: 30px;
+	background-position: -22.5px 0px;
+	top: 5px;
+	margin: -5px 0px;
+}
+.facebook-alt-icon{
+	width: 30px;
+	background-position: -22.5px 0px;
+	top: 5px;
+	margin: 0px;
+}
+.pinterest-icon{
+	width: 30px;
+	background-position: -47px 0px;
+	top: 5px;
+	margin: -5px 0px;
+}
+.pinterest-alt-icon{
+	width: 30px;
+	background-position: -200px 0px;
+	top: 5px;
+	margin: 0px 10px;
+}
+
+.email-icon{
+	width: 30px;
+	background-position: -72px 0px;
+	top: 5px;
+	margin: -5px 0px;
+}
+.email-alt-icon{
+	width: 30px;
+	background-position: -72px 0px;
+	top: 5px;
+	margin: 0px;
+}
+.chevron-icon{
+	width: 20px;
+	height: 18px;
+	background-position: 0px -20px;
+}
+.unhide-icon{
+	width: 20px;
+	height: 18px;
+	background-position: 0px -1px;
+}
+.brochure-icon{
+	width: 25px;
+	background-position: -100px 0px;
+	top: 5px;
+	margin: -5px 0px;
+}
+.expert-icon{
+	width: 25px;
+	background-position: -125px 0px;
+	top: 5px;
+	margin: -5px 0px;
+}
+.feedback-icon{
+	width: 25px;
+	background-position: -150px 0px;
+	top: 5px;
+	margin: -5px 0px;
+}
+.hidden-share-bar{
+	position: fixed;
+	bottom: -40px;
+	left: 0px;
+	height: 40px;
+	list-style-type: none;
+}
+.center-align{
+	text-align: center;
+}
+
+span.at-icon-wrapper{
+	display: none;
+}
+.at-icon, .at-icon-pinterest_share, .at-icon-wrapper{
+	display: none;
+}
+
+@media screen and (max-width: 767px){
+	.hide{
+		display: none;
+	}
+	.hide-before{
+		display: inline-block;
+	}
+	.share-button{
+		display: inline-block;
+		padding: 7px 10px;
+	}
+	.link-text{
+		padding: 7px 10px;
+		margin-bottom: -7px;
+	}
+	.action-toolbar-list{
+		padding: 0px;
+		margin: 0px;
+	}
+	.share-button:hover{
+		background-color: #484848;
+	}
+	.toolbar-link-view{
+		text-decoration: none;
+		color: white;
+	}
+	.text-change{
+		display: none;
+	}
+	.toolbar-item + .toolbar-item{
+		border-left: 1px solid white;
+	}
+	.share-bar{
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: 40px;
+		background-color: #333333;
+		opacity: 0.8;
+	}
+	.action-toolbar-raised{
+		position: fixed;
+		bottom: 40px;
+		left: 0px;
+		width: 100%;
+		background-color: #787978;
+		opacity: 0.8;
+		text-align: center;
+		z-index: 1000;
+	}
+}
+@media screen and (max-width: 500px){
+	.toolbar-hide{
+		position: absolute;
+		left: 15px;
+		top: -15px;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		line-height: 18px;
+		z-index: 1;
+	}
+	.toolbar-hide-text{
+		display: none;
+	}
+	.toolbar-hide{
+		position: absolute;
+		height: 20px;
+		left: 5px;
+		top: -20px;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		border-radius: 3px 3px 0px 0px;
+		width: 40px;
+		z-index: 1;
+	}
+	.toolbar-hide-text{
+		display: none;
+	}
 }
