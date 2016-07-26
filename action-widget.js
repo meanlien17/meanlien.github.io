@@ -139,10 +139,14 @@ function initBrochureAction($container) {
 		if(sessionStorage.getItem('hidden')=='true'){
 				$(".action-toolbar").toggleClass("action-toolbar-lowered ");
 				$(".chevron-icon").toggleClass("unhide-icon");
+				$(".show-text").toggleClass("show");
+				$(".toolbar-hide").toggleClass("toolbar-hide-lower");
 		}
 		$(hideButton).click(function(){
 			$(".action-toolbar").toggleClass("action-toolbar-lowered ");
 			$(".chevron-icon").toggleClass("unhide-icon");
+			$(".show-text").toggleClass("show");
+			$(".toolbar-hide").toggleClass("toolbar-hide-lower");
 			if(visible == true){
 				$(".hidden-share-bar").toggleClass("share-bar");
 				$(".action-toolbar").toggleClass("action-toolbar-raised");
