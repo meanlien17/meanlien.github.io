@@ -256,9 +256,9 @@
 	width: 100%;
 }
 .action-toolbar-wrapper {
+	font-family:'Gotham XNarrow SSm 4r', Arial, Helvetica, sans-serif;
 	z-index: 1000;
 	font-size: .875em;
-	font-family:'Gotham XNarrow SSm 4r', Arial, Helvetica, sans-serif;
 }
 .link-text{
 	padding: 0px 20px 7px;
@@ -387,7 +387,7 @@
 	width: 30px;
 	background-position: -47px 0px;
 	top: 5px;
-	margin: -5px 0px;
+	margin: -5px 0px -5px 4px;
 }
 .pinterest-alt-icon{
 	width: 30px;
@@ -400,7 +400,8 @@
 	width: 30px;
 	background-position: -72px 0px;
 	top: 5px;
-	margin: -5px 0px;
+	margin: -5px 20px -5px 10px;
+
 }
 .email-alt-icon{
 	width: 30px;
