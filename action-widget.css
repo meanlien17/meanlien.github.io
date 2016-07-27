@@ -321,14 +321,13 @@
 .toolbar-hide-lower{
 	position: absolute;
 	right: 10px;
-	top:-25px;
+	top:-30px;
 	border-radius: 3px;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	width: 72px;
-	height: 30px;
-	padding-bottom: 10px;
-	padding-top: 4px;
+	height: 35px;
+	padding-top: 5px;
 	z-index: 1;
 }
 .toolbar-button {
