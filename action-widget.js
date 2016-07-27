@@ -118,7 +118,7 @@ function initBrochureAction($container) {
 
 //Action Toolbar Javascript
 
-
+//feedbackify part of action toolbar
 	var fby = fby || [];
 	(function () {
 	var f = document.createElement('script'); f.type = 'text/javascript'; f.async = true;
@@ -133,6 +133,7 @@ function initBrochureAction($container) {
 		var shareActive = document.getElementById("share-active");
 		var addthis_config = {ui_use_css : false};
 		var addthis_loaded = false;
+		//if session storage isnt set initialized then creates session storage
 	if(!sessionStorage.getItem('hidden')){
 		sessionStorage.setItem('hidden', 'false');
 	}
@@ -141,12 +142,14 @@ function initBrochureAction($container) {
 				$(".chevron-icon").toggleClass("unhide-icon");
 				$(".show-text").toggleClass("show");
 				$(".toolbar-hide").toggleClass("toolbar-hide-lower");
+				$(".toolbar-hide-text").toggleClass("hide-before hide");
 		}
 		$(hideButton).click(function(){
 			$(".action-toolbar").toggleClass("action-toolbar-lowered ");
 			$(".chevron-icon").toggleClass("unhide-icon");
 			$(".show-text").toggleClass("show");
 			$(".toolbar-hide").toggleClass("toolbar-hide-lower");
+			$(".toolbar-hide-text").toggleClass("hide-before hide");
 			if(visible == true){
 				$(".hidden-share-bar").toggleClass("share-bar");
 				$(".action-toolbar").toggleClass("action-toolbar-raised");
@@ -167,9 +170,11 @@ function initBrochureAction($container) {
 				visible = false;
 			}
 		});
+		//when feedback button is clicked opens form.
 		$('#feedback-btn').click(function(){
 			fby.push(['showForm', '4896']);
 		});
+		//when facebook,pinterest, or email icon clicked laods addthis
 		$('.facebook-link').click(function(){
 			if(addthis_loaded == false){
 				initAddThis();
