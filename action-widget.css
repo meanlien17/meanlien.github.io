@@ -258,9 +258,7 @@
 .action-toolbar-wrapper {
 	font-family:'Gotham XNarrow SSm 5r', Arial, Helvetica, sans-serif;
 	z-index: 1000;
-}
-.gotham-xn-medium{
-	font-family:'Gotham XNarrow SSm 5r', Arial, Helvetica, sans-serif;
+	font-size: .875em;
 }
 .link-text{
 	padding: 0px 20px 7px;
@@ -270,7 +268,6 @@
 	display: inline-block;
 	text-decoration: none;
 	color: white;
-	font-size: .875em;
 	margin-right: -5px;
 }
 .toolbar-hover:hover{
@@ -315,7 +312,7 @@
 	-webkit-border-radius:3px;
 	width: 50px;
 	height: 50px;
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 	z-index: 1;
 }
 .toolbar-hide-lower{
@@ -351,6 +348,7 @@
 }
 .toolbar-hide-text{
 	display: block;
+	font-family: 'Gotham XNarrow SSm 5r', Arial, Helvetica, sans-serif;
 }
 .share-button{
 	display: none;
@@ -366,7 +364,7 @@
 }
 .icons{
 	height: 30px;
-	background-image: url(./action-toolbar-icons.png);
+	background-image: url(../../images/global/action-toolbar-icons.png);
 	position: relative;
 	display: inline-block;
 }
@@ -413,6 +411,7 @@
 .chevron-icon{
 	width: 20px;
 	height: 18px;
+	margin-bottom: -0.25px;
 	background-position: 0px -20px;
 }
 .unhide-icon{
