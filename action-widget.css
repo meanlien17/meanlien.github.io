@@ -258,7 +258,7 @@
 .action-toolbar-wrapper {
 	z-index: 1000;
 	font-size: .875em;
-	font-family:'Gotham XNarrow SSm 5r', Arial, Helvetica, sans-serif;
+	font-family:'Gotham XNarrow SSm 4r', Arial, Helvetica, sans-serif;
 }
 .link-text{
 	padding: 0px 20px 7px;
@@ -348,7 +348,7 @@
 }
 .toolbar-hide-text{
 	display: block;
-	font-family: 'Gotham XNarrow SSm 5r', Arial, Helvetica, sans-serif;
+	font-family: 'Gotham XNarrow SSm 4r', Arial, Helvetica, sans-serif;
 }
 .share-button{
 	display: none;
