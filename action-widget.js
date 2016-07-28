@@ -143,7 +143,9 @@ function initBrochureAction($container) {
 				$(".show-text").toggleClass("show");
 				$(".toolbar-hide").toggleClass("toolbar-hide-lower");
 				$(".toolbar-hide-text").toggleClass("hide-before hide");
-		}
+		}//else{
+			//load scripts
+		//}
 		$(hideButton).click(function(){
 			$(".action-toolbar").toggleClass("action-toolbar-lowered ");
 			$(".white-downchevron-10").toggleClass("white-upchevron-10 upchevron-position");
@@ -176,8 +178,13 @@ function initBrochureAction($container) {
 		});
 		//when facebook,pinterest, or email icon clicked laods addthis
 		$('.facebook-link').click(function(){
+			var script = document.createElement('script');
+			script.setAttribute('type', 'text/javascript');
+			script.setAttribute('src', "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d#async=1");
+			document.head.appendChild(script);
 			if(addthis_loaded == false){
-				$.getScript("text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d");
+
+				initAddThis();
 				addthis_loaded = true;
 			}
 		});
@@ -196,7 +203,9 @@ function initBrochureAction($container) {
 		function initAddThis(){
 			addthis.init();
 		};
-		$('.printer')
+		$('.printer').click(function(){
+			window.print();
+		});
 		// grabs the URL and title and inputs it in the share URL provided by facebook
 			/*
 		$('.facebook-link').click(function(){
