@@ -67,29 +67,6 @@
 			fby.push(['showForm', '4896']);
 		});
 		//when facebook,pinterest, or email icon clicked laods addthis
-		$('.facebook-link').click(function(){
-			var script = document.createElement('script');
-			script.setAttribute('type', 'text/javascript');
-			script.setAttribute('src', "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d#async=1");
-			document.head.appendChild(script);
-			if(addthis_loaded == false){
-
-				initAddThis();
-				addthis_loaded = true;
-			}
-		});
-		$('.pinterest-link').click(function(){
-			if(addthis_loaded == false){
-				initAddThis();
-				addthis_loaded = true;
-			}
-		});
-		$('.email-link').click(function(){
-			if(addthis_loaded == false){
-				initAddThis();
-				addthis_loaded = true;
-			}
-		});
 		function initAddThis(){
 			addthis.init();
 		};
