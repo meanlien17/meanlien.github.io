@@ -69,7 +69,7 @@
 		//when facebook,pinterest, or email icon clicked laods addthis
 		function initAddThis(){
 			addthis.init();
-		};
+		}
 		$('.printer').click(function(){
 			window.print();
 		});
