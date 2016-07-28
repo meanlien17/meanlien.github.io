@@ -27,9 +27,10 @@
 				$(".show-text").toggleClass("show");
 				$(".toolbar-hide").toggleClass("toolbar-hide-lower");
 				$(".toolbar-hide-text").toggleClass("hide-before hide");
-		}//else{
+		}else{
+			loadJS('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d#async=1');
 			//load scripts
-		//}
+		}
 		$(hideButton).click(function(){
 			$(".action-toolbar").toggleClass("action-toolbar-lowered ");
 			$(".white-downchevron-10").toggleClass("white-upchevron-10 upchevron-position");
