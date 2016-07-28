@@ -257,11 +257,11 @@
 }
 .action-toolbar-wrapper {
 	font-family:'Gotham XNarrow SSm 4r', Arial, Helvetica, sans-serif;
+	font-size: 1.07692308em;
 	z-index: 1000;
-	font-size: .875em;
 }
 .link-text{
-	padding: 0px 20px 7px;
+	padding: 5px 18px ;
 	margin-bottom: -7px;
 }
 .toolbar-item{
@@ -271,13 +271,13 @@
 	margin-right: -5px;
 }
 .toolbar-hover:hover{
-	background-color: #484848
+	background-color: #484848;
 }
 .toolbar-item + .toolbar-item{
-	padding-bottom: 7px;
+	padding-bottom: 6px;
 	border-left: 1px solid white;
 }
-.brochure{
+.printer{
 	padding-bottom: 7px;
 	border-left: 1px solid white;
 	margin-right: -5px;
@@ -289,17 +289,17 @@
 	left: 0px;
 	width: 100%;
 	background-color: #787978;
-	opacity: 0.8;
+	opacity: 0.95;
 	text-align: center;
 	z-index: 1000;
 }
 .action-toolbar-lowered{
 	position: fixed;
-	bottom: -30px;
+	bottom: -31px;
 	left: 0px;
 	width: 100%;
 	background-color: #787978;
-	opacity: 0.8;
+	opacity: 0.95;
 	text-align: center;
 	z-index: 1000;
 }
@@ -322,13 +322,14 @@
 	border-radius: 3px;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
-	width: 72px;
+	width: 70px;
 	height: 35px;
 	padding-top: 5px;
 	z-index: 1;
 }
 .toolbar-button {
 	background-color:#787978;
+	padding: auto;
 	color: white;
 	border: none;
 	cursor: pointer;
@@ -349,6 +350,7 @@
 .toolbar-hide-text{
 	display: block;
 	font-family: 'Gotham XNarrow SSm 4r', Arial, Helvetica, sans-serif;
+	margin-top: -3px;
 }
 .share-button{
 	display: none;
@@ -362,84 +364,10 @@
 	padding: 0px;
 	z-index: 1000;
 }
-.icons{
-	height: 30px;
-	background-image: url(./action-toolbar-icons.png);
-	position: relative;
-	display: inline-block;
-}
 .hide-before{
 	display: none;
 }
-.facebook-icon{
-	width: 30px;
-	background-position: -22.5px 0px;
-	top: 5px;
-	margin: -5px 0px;
-}
-.facebook-alt-icon{
-	width: 30px;
-	background-position: -22.5px 0px;
-	top: 5px;
-	margin: 0px;
-}
-.pinterest-icon{
-	width: 30px;
-	background-position: -47px 0px;
-	top: 5px;
-	margin: -5px 0px -5px 4px;
-}
-.pinterest-alt-icon{
-	width: 30px;
-	background-position: -200px 0px;
-	top: 5px;
-	margin: 0px 10px;
-}
 
-.email-icon{
-	width: 30px;
-	background-position: -72px 0px;
-	top: 5px;
-	margin: -5px 20px -5px 10px;
-
-}
-.email-alt-icon{
-	width: 30px;
-	background-position: -72px 0px;
-	top: 5px;
-	margin: 0px;
-}
-.chevron-icon{
-	width: 20px;
-	height: 18px;
-	margin-bottom: -0.25px;
-	background-position: 0px -20px;
-}
-.unhide-icon{
-	display:inline-block;
-	width: 18px;
-	height: 18px;
-	background-position: 0px -1px;
-	margin-bottom: -6px;
-}
-.brochure-icon{
-	width: 25px;
-	background-position: -100px 0px;
-	top: 5px;
-	margin: -5px 0px;
-}
-.expert-icon{
-	width: 25px;
-	background-position: -125px 0px;
-	top: 5px;
-	margin: -5px 0px;
-}
-.feedback-icon{
-	width: 25px;
-	background-position: -150px 0px;
-	top: 5px;
-	margin: -5px 0px;
-}
 .hidden-share-bar{
 	position: fixed;
 	bottom: -40px;
@@ -462,22 +390,54 @@ span.at-icon-wrapper{
 }
 .show{
 	display: inline-block;
+	margin-right: -2px;
+	margin-left: -2px;
 }
-
-@media screen and (max-width: 767px){
-	.hide{
+.downchevron-position{
+	margin-bottom: 5px;
+}
+.upchevron-position{
+	margin-bottom: 0px;
+	padding-left: 0px;
+	margin-left: 0px;
+}
+.hover-icon{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	margin-bottom: -5px;
+	padding-top: 5px;
+}
+.email-icon{
+	margin-right: 0px;
+}
+@media screen and (max-width: 900px){
+	.printer{
 		display: none;
+	}
+}
+@media screen and (max-width: 767px){
+	.toolbar-item-hide{
+		display: none;
+	}
+	.hide-after{
+		display:none;
 	}
 	.hide-before{
 		display: inline-block;
 	}
 	.share-button{
 		display: inline-block;
-		padding: 7px 10px;
+		padding: 6px 10px;
 	}
 	.link-text{
-		padding: 7px 10px;
+		padding: 6px 10px;
 		margin-bottom: -7px;
+
+	}
+	.toolbar-item + .toolbar-item{
+		padding-bottom: 6px;
+		border-left: 1px solid white;
 	}
 	.action-toolbar-list{
 		padding: 0px;
@@ -503,7 +463,7 @@ span.at-icon-wrapper{
 		width: 100%;
 		height: 40px;
 		background-color: #333333;
-		opacity: 0.8;
+		opacity: .95;
 	}
 	.action-toolbar-raised{
 		position: fixed;
@@ -511,7 +471,7 @@ span.at-icon-wrapper{
 		left: 0px;
 		width: 100%;
 		background-color: #787978;
-		opacity: 0.8;
+		opacity: 0.95;
 		text-align: center;
 		z-index: 1000;
 	}
@@ -525,20 +485,20 @@ span.at-icon-wrapper{
 		position: absolute;
 		height: 20px;
 		left: 5px;
-		top: -20px;
+		top: -23px;
 		-moz-border-radius:3px;
 		-webkit-border-radius:3px;
 		border-radius: 3px 3px 0px 0px;
 		width: 40px;
 		z-index: 1;
 	}
-	.unhide-icon{
-		display:inline-block;
-		width: 18px;
-		height: 18px;
-		background-position: 0px -2px;
-		padding-top: 0px;
-		margin-top: 0px;
-		margin-bottom: 0px;
+	.share-icon-spacing{
+		margin: 12.5px 15px;
+	}
+	.downchevron-position{
+		margin-bottom: 10px;
+	}
+	.upchevron-position{
+		margin: -4px auto 7px auto;
 	}
 }
