@@ -29,6 +29,7 @@
 				$(".toolbar-hide-text").toggleClass("hide-before hide");
 		}else{
 			loadJS('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d#async=1');
+			addthis_loaded= true;
 			//load scripts
 		}
 		$(hideButton).click(function(){
@@ -45,6 +46,10 @@
 				sessionStorage.setItem('hidden', 'true');
 			}else{
 				sessionStorage.setItem('hidden', 'false');
+			}
+			if(addthis_loaded == false){
+				loadJS('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5796297c9cb7080d#async=1');
+				addthis_loaded=true;
 			}
 		});
 		$(shareActive).click(function(){
