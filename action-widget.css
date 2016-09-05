@@ -337,6 +337,7 @@
 	padding: 0px;
 	margin: 0px;
 	font-size: 0;
+	text-align: center;
 }
 .toolbar-link-view{
 	display: inline-block;
