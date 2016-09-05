@@ -5252,6 +5252,7 @@ th {
 	background-image: none;
 	background-attachment:fixed;
 	background-repeat: no-repeat;
+	text-align: center;
 }
 #container.full-bg {
 	-webkit-background-size: cover;
