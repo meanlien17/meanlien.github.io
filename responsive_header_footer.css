@@ -6,6 +6,9 @@
 body {
 	overflow:hidden;
 }
+.headerImage{
+	width: 100%;
+}
 .responsive-img img {
 	display:block;
 	height:auto;
