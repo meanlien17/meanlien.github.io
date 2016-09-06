@@ -449,6 +449,8 @@
 	}
 	.share-button{
 		display: inline-block;
+		padding-right: 10px;
+
 	}
 
 	.link-text{
